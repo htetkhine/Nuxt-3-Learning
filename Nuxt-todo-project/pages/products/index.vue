@@ -3,7 +3,7 @@
         <h3 class="text-center mb-5">Shop</h3>
         <div class="container">
             <div class="row">              
-              <div class="col-md-3 col-sm-6 col-12" v-for="product in products" :key="product.id">
+              <div class="col-md-3 col-sm-6 col-12 mb-3" v-for="product in products" :key="product.id">
                   <productCard :product="product" />
               </div>
             </div>

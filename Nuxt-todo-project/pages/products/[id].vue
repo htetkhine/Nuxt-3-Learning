@@ -1,11 +1,15 @@
 <template>
-    <div class="py-5">
+    <div class="productDetail py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-6 text-center">
+                    <img :src="product.image" alt="image thumb" class="img-fluid">
+                </div>
+                <div class="col-6">
                     <h3>{{ product.title }}</h3>
-                    <p>{{ product.price }}</p>
-                    <p>{{ product.id }}</p>
+                    <p>$ {{ product.price }}</p>
+                    <hr>
+                    <p>{{ product.description }}</p>
                 </div>
             </div>
         </div>        
@@ -18,6 +22,11 @@
     const { data:product} = await useFetch(url);
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+        
+    .productDetail img{
+        width: 200px;
+        max-width: 100%; 
+        margin: 0 auto;       
+    }
 </style>
